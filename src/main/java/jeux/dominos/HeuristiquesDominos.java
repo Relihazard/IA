@@ -6,7 +6,7 @@ import iia.jeux.modele.PlateauJeu;
 import iia.jeux.modele.joueur.Joueur;
 
 
-public class HeuristiquesDominos{
+public class HeuristiquesDominos {
 
 	public static  Heuristique hblanc = new Heuristique(){
 				

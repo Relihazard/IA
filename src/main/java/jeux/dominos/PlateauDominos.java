@@ -42,7 +42,10 @@ public class PlateauDominos implements PlateauJeu {
 	}
 
 	PlateauDominos(int depuis[][]){
-	    System.arraycopy(depuis, 0, damier, 0, depuis.length);
+		damier = new int[TAILLE][TAILLE];
+		for(int i=0; i < TAILLE; i++)
+			for (int j=0; j < TAILLE; j++)
+				damier[i][j] = depuis[i][j];
 	}
 
 	/************* Gestion des paramètres de classe** ****************/ 
@@ -96,7 +99,7 @@ public class PlateauDominos implements PlateauJeu {
 
 	public boolean finDePartie() {
 		int nbCoupsBlanc = this.coupsPossibles(joueurBlanc).size();
-		int nbCoupsNoir = this.coupsPossibles(joueurNoir).size();		
+		int nbCoupsNoir = this.coupsPossibles(joueurNoir).size();
 		return (nbCoupsBlanc==0 || nbCoupsNoir==0);
 	}
 
